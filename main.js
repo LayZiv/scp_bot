@@ -31,6 +31,7 @@ function handleCommands(args,msg) {
 }
 
 client.on(Events.MessageCreate, msg => {
+
     if (msg.content[0] != ";") {
         return;
     }

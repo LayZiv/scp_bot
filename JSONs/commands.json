@@ -2,7 +2,8 @@
     "fcmds":[
         ";ping",
         ";urgent",
-        ";e&t"
+        ";e&t",
+        ";info {department}"
     ],
 
     "gcmds":[
@@ -12,8 +13,8 @@
     ],
 
     "mcmds":[
-        ";kick",
-        ";purge",
+        ";kick {Member}",
+        ";purge {Amount}",
         ";set-join-channel"
     ]
 }

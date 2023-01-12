@@ -20,7 +20,7 @@ exports.generalcommands = {
         }
 
         const helpEmbed = new EmbedBuilder()
-            .setColor(0xFF0000)
+            .setColor(0x000000)
             .setTitle('SCP: Exploration')
             .addFields(
                 { name: 'General', value: generalcmds, inline: true },
@@ -35,10 +35,12 @@ exports.generalcommands = {
     },
 
     ";grp" : function(args,msg) {
+        if (!msg.member.permissions.has([PermissionsBitField.Flags.MentionEveryone])) return msg.reply("Invalid permissions.");
         msg.channel.send("@here\n\n**GRP** [Top Server]\n\nhttps://www.roblox.com/games/5118029260/Group-Recruiting-Plaza-6-5");
     },
 
     ";ssu" : function(args,msg) {
+        if (!msg.member.permissions.has([PermissionsBitField.Flags.MentionEveryone])) return msg.reply("Invalid permissions.");
         msg.channel.send("@here\n\n**SSU** [CoE in effect]\n\nhttps://www.roblox.com/games/11969422877/Site-Bravo");
     }
 }

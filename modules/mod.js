@@ -25,7 +25,7 @@ exports.modcommands = {
         }
 
         var amount = parseInt(args[1]);
-        if (isNaN(amount)) {msg.reply("USAGE: ;purge (amount)"); return;}
+        if (isNaN(amount)) {msg.reply("USAGE: ;purge {amount}"); return;}
 
         msg.channel.bulkDelete(amount).then(() => {
             msg.channel.send(`Purged **${amount}** message(s).`)
@@ -36,7 +36,7 @@ exports.modcommands = {
     ";kick": function(args,msg) {
         if (!msg.member.permissions.has("KICK_MEMBERS")) return msg.reply("Invalid permissions.");
     
-        if (!args[1]) return msg.channel.send("Specify a member.");
+        if (!args[1]) return msg.channel.send("USAGE: ;kick {member}");
     
         let member = msg.mentions.members.first() || msg.guild.members.cache.get(args[0]) || msg.guild.members.cache.find(x => x.user.username.toLowerCase() === args.slice(0).join(" ") || x.user.username === args[0]);
     
