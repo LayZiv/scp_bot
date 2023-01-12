@@ -84,6 +84,10 @@ const funcommands = {
     ";ping": function(args,msg) {
         msg.reply("pong!");
     },
+
+    ";e&t": function(args,msg) {
+        msg.reply("https://www.youtube.com/watch?v=7K7UdPaYZkA");
+    },
 }
 
 const generalcommands = {
@@ -112,10 +116,20 @@ const generalcommands = {
                 { name: 'Fun', value: funcmds, inline: true },
                 { name: 'Moderation', value: modcmds, inline: true }
             )
+            .setThumbnail("https://media.discordapp.net/attachments/1004777138827821076/1062856783577751662/Screenshot_2023-01-01_190932-removebg-preview.png")
+            .setFooter({ text: 'Made by LayZiv'});
 
 
         msg.channel.send({ embeds: [helpEmbed] });
     },
+
+    ";grp" : function(args,msg) {
+        msg.channel.send("@here\n\n**GRP** [Top Server]\n\nhttps://www.roblox.com/games/5118029260/Group-Recruiting-Plaza-6-5");
+    },
+
+    ";ssu" : function(args,msg) {
+        msg.channel.send("@here\n\n**SSU** [CoE in effect]\n\nhttps://www.roblox.com/games/11969422877/Site-Bravo");
+    }
 }
 
 function handleCommands(args,msg) {
